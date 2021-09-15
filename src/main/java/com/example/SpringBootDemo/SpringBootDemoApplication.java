@@ -13,24 +13,12 @@ import java.time.Period;
 import java.util.List;
 
 @SpringBootApplication
-@RestController
 public class SpringBootDemoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootDemoApplication.class, args);
 	}
 
-	@GetMapping
-	public List<Student> studentList() {
-		return List.of(
-				new StudentImpl(
-						1L,
-						"Michael",
-						"michael.scott@dundermiflin.com",
-						LocalDate.of(1964, Month.FEBRUARY, 20),
-						Period.between(LocalDate.of(1964, Month.FEBRUARY, 20), LocalDate.now()).getYears()
-				)
-		);
-	}
+
 
 }
